@@ -144,7 +144,7 @@ $theme_file_contents = str_replace("-----PG_JSLOAD-----", $loadjavascripts, $the
 
 // Commented common.css cause it creates artifacts with the old theme
 //$commonCSSurl = '<link href="themes/common.css" rel="stylesheet">';
-$commonCSSurl = '<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">';
+$commonCSSurl = '<link href="/style/font-awesome.css" rel="stylesheet">';
 
 $theme_file_contents = str_replace("-----PG_COMMONCSSLOAD-----", $commonCSSurl, $theme_file_contents); 
 
