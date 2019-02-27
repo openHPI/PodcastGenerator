@@ -266,7 +266,7 @@ if (isUserLogged()) { //if you are logged do not display freebox
 
 	#FOOTER
 
-	$definefooter = _("Powered by").' <a href="http://www.podcastgenerator.net" title="'._("Podcast Generator")._(", an open source podcast publishing solution").'">'._("Podcast Generator").'</a>'._(", an open source podcast publishing solution");
+	$definefooter = '&copy; <a href="https://hpi.de">Hasso-Plattner-Institut</a> 2019&ensp;|&ensp;<a href="https://hpi.de/impressum.html" target="_blank">Impressum</a>&ensp;|&ensp;<a href="https://hpi.de/datenschutz.html" target="_blank">Datenschutz</a>';
 
 	$theme_file_contents = str_replace("-----PG_FOOTER-----", $definefooter, $theme_file_contents);
 

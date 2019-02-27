@@ -99,6 +99,9 @@ body {
 .container.mainbody {
 	padding: 25px 0;
 }
+.container.mainbody a {
+	color: #de6207;
+}
 .centered {
 	text-align: center;
 }
