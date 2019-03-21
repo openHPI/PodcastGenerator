@@ -492,13 +492,13 @@ function showPodcastEpisodes($all,$category) {
 						$resulting_episodes .= '<div class="episode">'; //open the single episode DIV
 					} 
 
-					////Author
-					$episode_author = '<small class="episode_author">' . $thisPodcastEpisodeData[6] . '</small>';
-
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title"><a href="?name='.$thisPodcastEpisode[5].'.'.$thisPodcastEpisode[3].'">'.$thisPodcastEpisodeData[0];
 					if (isItAvideo($thisPodcastEpisode[3])) $resulting_episodes .= '&nbsp;<i class="fa fa-youtube-play"></i>'; //add video icon
-					$resulting_episodes .= '</a>'.$episode_author.'</h3>';
+					$resulting_episodes .= '</a></h3>';
+
+					////Author
+					$resulting_episodes .= '<small class="episode_author">'.$thisPodcastEpisodeData[6].'</small>';
 
 					////Date
 					$resulting_episodes .= '<p class="episode_date">';
@@ -660,13 +660,13 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 						$resulting_episodes .= '<div class="episode">';
 						$resulting_episodes .= '<div class="span6 col-md-6 6u episodebox">'; //open the single episode DIV
 
-					////Author
-					$episode_author = '<small class="episode_author">' . $thisPodcastEpisodeData[6] . '</small>';
-
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title">'.$thisPodcastEpisodeData[0];
 					if (isItAvideo($thisPodcastEpisode[3])) $resulting_episodes .= '&nbsp;<i class="fa fa-youtube-play"></i>'; //add video icon
-					$resulting_episodes .= $episode_author.'</h3>';
+					$resulting_episodes .= '</h3>';
+
+					////Author
+					$resulting_episodes .= '<small class="episode_author">'.$thisPodcastEpisodeData[6].'</small>';
 
 					////Date
 					$resulting_episodes .= '<p class="episode_date">';

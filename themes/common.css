@@ -32,7 +32,9 @@ body {
 
 .episode_author {
 	font-size: 17px;
-	margin-left: 4px;
+	color: #999;
+	margin-bottom: 15px;
+	display: block;
 }
 
 .episode_date {
