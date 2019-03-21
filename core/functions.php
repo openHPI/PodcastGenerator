@@ -493,7 +493,7 @@ function showPodcastEpisodes($all,$category) {
 					} 
 
 					////Author
-					$episode_author = '<small class="episode_author">' . $thisPodcastEpisode[6] . '</small>'
+					$episode_author = '<small class="episode_author">' . $thisPodcastEpisodeData[6] . '</small>';
 
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title"><a href="?name='.$thisPodcastEpisode[5].'.'.$thisPodcastEpisode[3].'">'.$thisPodcastEpisodeData[0];
@@ -661,7 +661,7 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 						$resulting_episodes .= '<div class="span6 col-md-6 6u episodebox">'; //open the single episode DIV
 
 					////Author
-					$episode_author = '<small class="episode_author">' . $thisPodcastEpisode[6] . '</small>'
+					$episode_author = '<small class="episode_author">' . $thisPodcastEpisodeData[6] . '</small>';
 
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title">'.$thisPodcastEpisodeData[0];
