@@ -30,6 +30,11 @@ body {
 	padding:0;
 }
 
+.episode_author {
+	font-size: 17px;
+	margin-left: 4px;
+}
+
 .episode_date {
 	margin-top:-5px;
 }

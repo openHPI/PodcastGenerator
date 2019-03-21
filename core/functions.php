@@ -492,10 +492,13 @@ function showPodcastEpisodes($all,$category) {
 						$resulting_episodes .= '<div class="episode">'; //open the single episode DIV
 					} 
 
+					////Author
+					$episode_author = '<small class="episode_author">' . $thisPodcastEpisode[6] . '</small>'
+
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title"><a href="?name='.$thisPodcastEpisode[5].'.'.$thisPodcastEpisode[3].'">'.$thisPodcastEpisodeData[0];
 					if (isItAvideo($thisPodcastEpisode[3])) $resulting_episodes .= '&nbsp;<i class="fa fa-youtube-play"></i>'; //add video icon
-					$resulting_episodes .= '</a></h3>';
+					$resulting_episodes .= '</a>'.$episode_author.'</h3>';
 
 					////Date
 					$resulting_episodes .= '<p class="episode_date">';
@@ -506,7 +509,6 @@ function showPodcastEpisodes($all,$category) {
 					$episodeDate = date ($dateformat, $thisEpisodeDate);
 					$resulting_episodes .= $episodeDate.'</p>';
 
-					
 					//// Edit/Delete button for logged user (i.e. admin)
 					if (isUserLogged()) { 
 						$resulting_episodes .= '<p><a class="btn btn-inverse btn-xs btn-mini" href="?p=admin&amp;do=edit&amp;=episode&amp;name='.urlencode($thisPodcastEpisode[5]).'.'.$thisPodcastEpisode[3].'">'._("Edit / Delete").'</a></p>';
@@ -657,13 +659,14 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 					//Theme engine PG version >= 2.0 row-fluid
 						$resulting_episodes .= '<div class="episode">';
 						$resulting_episodes .= '<div class="span6 col-md-6 6u episodebox">'; //open the single episode DIV
-			
+
+					////Author
+					$episode_author = '<small class="episode_author">' . $thisPodcastEpisode[6] . '</small>'
 
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title">'.$thisPodcastEpisodeData[0];
 					if (isItAvideo($thisPodcastEpisode[3])) $resulting_episodes .= '&nbsp;<i class="fa fa-youtube-play"></i>'; //add video icon
-					$resulting_episodes .= '</h3>';
-
+					$resulting_episodes .= $episode_author.'</h3>';
 
 					////Date
 					$resulting_episodes .= '<p class="episode_date">';
@@ -674,7 +677,6 @@ function showSingleEpisode($singleEpisode,$justTitle) {
 					$episodeDate = date ($dateformat, $thisEpisodeDate);
 					$resulting_episodes .= $episodeDate.'</p>';
 
-					
 					//// Edit/Delete button for logged user (i.e. admin)
 					if (isUserLogged()) { 
 						$resulting_episodes .= '<p><a class="btn btn-inverse btn-xs btn-mini" href="?p=admin&amp;do=edit&amp;=episode&amp;name='.urlencode($thisPodcastEpisode[5]).'.'.$thisPodcastEpisode[3].'">'._("Edit / Delete").'</a></p>';
