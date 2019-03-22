@@ -493,7 +493,7 @@ function showPodcastEpisodes($all,$category) {
 					} 
 
 					////Author
-					$resulting_episodes .= '<p class="episode_author">'.$thisPodcastEpisodeData[6].'</>';
+					$resulting_episodes .= '<p class="episode_author">'.$thisPodcastEpisodeData[6].'</p>';
 
 					////Title
 					$resulting_episodes .= '<h3 class="episode_title"><a href="?name='.$thisPodcastEpisode[5].'.'.$thisPodcastEpisode[3].'">'.$thisPodcastEpisodeData[0];
